@@ -1,0 +1,22 @@
+button {
+  margin: 5px;
+  padding: 5px;
+}
+
+.whole {
+  margin-top: 10%;
+}
+
+.customBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+.heading,
+.counter {
+  font-size: 5rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}

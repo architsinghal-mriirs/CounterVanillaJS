@@ -22,7 +22,26 @@ btn.forEach((element) => {
     } else if (props.contains("reset")) {
       clearInterval(interval);
       count = 0;
+    } else if (props.contains("stylize")) {
+      changeBackground();
     }
     value.textContent = count;
   });
 });
+
+function generateRandomColor() {
+  let options = [1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
+  let pallete = "";
+  for (let i = 0; i < 6; i++) {
+    let index = Math.floor(Math.random() * options.length);
+    pallete += options[index];
+  }
+
+  console.log(pallete);
+
+  return "#" + pallete;
+}
+function changeBackground() {
+  let pallete = generateRandomColor();
+  document.body.style.backgroundColor = pallete;
+}
